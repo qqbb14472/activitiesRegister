@@ -1,0 +1,19 @@
+<p>活动详情</p>
+
+<p>{{activity1.activityName}}</p>
+<p>时间:{{activity1.activityDate}} </p>
+<p>地点:{{activity1.activityLocation}}</p>
+<p>海报:{{activity1.activityPoster}}</p>
+
+<!-- 这里[class.]的作用？ -->
+<button type="button" (click)="onRegister(activity1)" > 
+    报名参加
+</button>
+
+<!-- <p>为了测试点击之后数据是否传到后端并且传回来显示: 活动ID： {{activitySelected?.id}}</p>
+
+<p>点击报名参加之后这里会load 一个注册组件</p> -->
+
+<app-register [activity1]="activitySelected"></app-register>
+
+

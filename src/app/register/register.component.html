@@ -1,0 +1,40 @@
+
+
+<div *ngIf="activity1"> 
+    
+    <p>活动代码 {{activity1.id}} 活动名字 {{activity1.activityName}} 注册表</p>
+
+    <form #newCustomer="ngForm" (ngSubmit)="onSubmit(newCustomer,activity1)">
+
+        <div>
+            <label for="cutomerName">*客户名: </label>
+            <input name="cutomerName" ngModel required #cutomerName="ngModel">
+        </div>
+
+        <div>
+            <label for="cutomerVX">*微信号: </label>
+            <input name="cutomerVX" ngModel required #cutomerVX="ngModel">
+        </div>
+
+        <div>
+            <label for="cutomerEmail">*邮箱: </label>
+            <input name="cutomerEmail" ngModel required #cutomerEmail="ngModel">
+        </div>
+
+        <div>
+            <label for="cutomerPhone">*手机号: </label>
+            <input name="cutomerPhone" ngModel required #cutomerPhone="ngModel">
+        </div>
+        
+        <button>Submit</button>
+
+        <!-- <p>message: {{customer.customerEmail}}</p> -->
+
+    </form>
+  
+
+</div>
+
+
+
+
